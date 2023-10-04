@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores RBA</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: grid;
+            place-items: center;
+        }
+        .container{
+            width: 400px;
+            padding: 20px;
+        }
+        .container * {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Set Colors</h1>
+        <input type="range" id="red" min="0" max="255">
+        <input type="range" id="green" min="0" max="255">
+        <input type="range" id="blue" min="0" max="255">
+        <input type="range" id="a" min="0" max="100">
+        
+    </div>
+    <script src="./coloresrgba.js"></script>
+</body>
+</html>

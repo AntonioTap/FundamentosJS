@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Elementos de un Array</h1>
+        <h2 id="resultado"></h2>
+        <h2 id="salen"></h2>
+        <input type="text" name="" id="box"><br>
+        <button onclick="addStart()">Agregar al inicio</button>
+        <button onclick="addEnd()">Agregar al final</button>
+        <button onclick="subsStart()">Extraer del inicio</button>
+        <button onclick="subsEnd()">Extraer del final</button>
+    </div>
+    <script>
+        const miArray = [];
+        const resultado = document.getElementById('resultado');
+        const salen = document.getElementById('salen');
+        const box = document.getElementById('box');
+        resultado.innerText = miArray;
+
+        const addStart = () => {
+            const dato = box.value;
+            miArray.unshift(dato);
+            resultado.innerText = miArray.join(' - ');
+        }
+
+        const subsEnd = () => {
+            const dato = miArray.pop();
+            salen.innerText = `Sale -> ${dato}`;
+            resultado.innerText = miArray.join(' - ');
+        }
+
+        const addEnd = () => {
+            const dato = box.value;
+            miArray.push(dato);
+            resultado.innerText = miArray.join(' - ');
+        }
+
+        const subsStart = () => {
+            const dato = miArray.shift();
+            salen.innerText =  `Sale -> ${dato}`;
+            resultado.innerText = miArray.join(' - ');
+        }
+    </script>
+</body>
+</html>
